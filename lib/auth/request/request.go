@@ -5,6 +5,11 @@ import (
 	"encoding/base64"
 )
 
+type Config struct {
+	Type string `yaml:"type"`
+	Key  string `yaml:"key"`
+}
+
 const (
 	TypePassword = "password"
 	TypeApiKey   = "api_key"

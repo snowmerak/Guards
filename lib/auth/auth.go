@@ -1,12 +1,9 @@
 package auth
 
-type Config struct {
-	Type string `yaml:"type"`
-	Key  string `yaml:"key"`
-}
+import "github.com/snowmerak/Guards/lib/auth/request"
 
 type Auth interface {
-	Authenticate(request Request) error
+	Authenticate(request request.Request) error
 }
 
 var (
